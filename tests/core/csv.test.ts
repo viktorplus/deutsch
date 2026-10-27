@@ -1,0 +1,5 @@
+import { expect, it } from 'vitest';
+import { exportWordsCsv, parseWordsCsv } from '../../src/lib/csv';
+it('roundtrips German Unicode, commas, quotes, newlines, BOM and CRLF', () => { const source = 'german,russian,example,level\r\n"die Straße","улица","Er sagt: ""Hallo,""\nund winkt.",A1'; const words = parseWordsCsv(source); const restored = parseWordsCsv(exportWordsCsv(words)); expect(restored[0].german).toBe('die Straße'); expect(restored[0].example).toBe('Er sagt: "Hallo,"\nund winkt.'); expect(restored[0].custom).toBe(true); expect(restored[0].id).not.toBe(words[0].id); });
+it('accepts semicolon files and rejects an entire invalid import', () => { expect(parseWordsCsv('\uFEFFgerman;russian;article\r\nHaus;дом;das\r\n\r\n')[0].article).toBe('das'); expect(() => parseWordsCsv('german,russian,article\nHaus,дом,das\nMann,мужчина,wrong')).toThrow('Строка 3'); expect(() => parseWordsCsv('german,russian\n"Haus,дом')).toThrow('кавычки'); });
+it('neutralizes spreadsheet formulas on export', () => { const words = parseWordsCsv('german,russian\n=SUM(A1),слово'); expect(exportWordsCsv(words)).toContain('"\'=SUM(A1)"'); });

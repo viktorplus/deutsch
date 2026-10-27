@@ -1,0 +1,103 @@
+import type { Question } from './builders';
+
+// Three additional practice questions, then two additional final questions.
+export const basicSupplements: Record<string, Question[]> = {
+  articles: [
+    ['Напишите с неопределённым артиклем: Lampe', 'eine Lampe', 'Lampe — женского рода: в Nominativ ставим eine.'],
+    ['Напишите с определённым артиклем: Fenster', 'das Fenster', 'Fenster — среднего рода; определённая форма das Fenster.'],
+    ['Напишите с определённым артиклем во множественном числе: Stühle', 'die Stühle', 'Во множественном числе в Nominativ у всех родов артикль die.'],
+    ['Напишите с неопределённым артиклем: Stuhl', 'ein Stuhl', 'Stuhl — мужского рода; в Nominativ используем ein Stuhl.'],
+    ['Напишите с определённым артиклем: Zeitung', 'die Zeitung', 'Zeitung — женского рода; существительные на -ung обычно имеют артикль die.'],
+  ],
+  pronouns: [
+    ['Замените das Fenster внутри предложения: Ich öffne es, denn ___ ist zu.', 'es', 'Fenster — среднего рода, поэтому внутри предложения пишем es со строчной буквы.'],
+    ['Замените die Kinder в начале: ___ spielen draußen.', 'Sie', 'Множественное число die Kinder заменяем sie; в начале предложения — Sie.'],
+    ['Вставьте местоимение «я» в начале: ___ lerne heute.', 'Ich', 'Говорящий о себе употребляет ich; первое слово пишется с большой буквы.'],
+    ['Соберите с местоимением вместо Anna und Paul: ___ wohnen in Köln.', 'Sie wohnen in Köln.', 'Anna und Paul — третье лицо множественного числа; выбираем sie wohnen.'],
+    ['Замените der Tisch полным предложением: ___ ist groß.', 'Er ist groß.', 'Немецкий Tisch мужского рода, поэтому нужен er, даже если русский перевод другого рода.'],
+  ],
+  present: [
+    ['Вставьте arbeiten: du ___ heute.', 'arbeitest', 'Основа arbeit- заканчивается на -t: перед -st добавляем e, получается arbeitest.'],
+    ['Вставьте lesen: er ___ ein Buch.', 'liest', 'У lesen в третьем лице единственного числа e меняется на ie: er liest.'],
+    ['Вставьте sprechen: du ___ Deutsch.', 'sprichst', 'У sprechen во втором лице единственного числа e меняется на i: sprichst.'],
+    ['Запишите предложение с fahren: Er ___ nach Berlin.', 'Er fährt nach Berlin.', 'В форме er fährt меняется a на ä; спрягаемый глагол стоит вторым.'],
+    ['Запишите предложение с öffnen: Ihr ___ die Tür.', 'Ihr öffnet die Tür.', 'К основе öffn- перед окончанием -t добавляем e: ihr öffnet.'],
+  ],
+  'sein-haben': [
+    ['Вставьте haben: Er ___ einen Hund.', 'hat', 'Третье лицо единственного числа haben — hat, без b.'],
+    ['Вставьте sein: Du ___ freundlich.', 'bist', 'Особая форма sein при du — bist. Связка в немецком предложении обязательна.'],
+    ['Вставьте sein: Ihr ___ pünktlich.', 'seid', 'Местоимению ihr соответствует seid; не путайте его с предлогом seit.'],
+    ['Запишите с haben: Wir ___ Hunger.', 'Wir haben Hunger.', 'В выражении Hunger haben используется haben; при wir форма haben.'],
+    ['Запишите с sein: Ich ___ zu Hause.', 'Ich bin zu Hause.', 'Для местонахождения с ich используем bin: Ich bin zu Hause.'],
+  ],
+  accusative: [
+    ['Напишите всё дополнение с определённым артиклем: Ich kaufe ___ (Stuhl).', 'den Stuhl', 'Stuhl — мужского рода; kaufen требует прямое дополнение den Stuhl.'],
+    ['Напишите всё дополнение с неопределённым артиклем: Sie hat ___ (Tasche).', 'eine Tasche', 'Tasche женского рода; неопределённый артикль в Akkusativ остаётся eine.'],
+    ['Напишите всё дополнение с определённым артиклем: Wir öffnen ___ (Fenster).', 'das Fenster', 'Fenster среднего рода; Akkusativ совпадает с Nominativ: das Fenster.'],
+    ['Запишите с определённым артиклем: Er liest ___ (Zeitung).', 'Er liest die Zeitung.', 'Zeitung женского рода; прямое дополнение имеет форму die Zeitung.'],
+    ['Запишите с неопределённым артиклем: Wir suchen ___ (Schlüssel).', 'Wir suchen einen Schlüssel.', 'Schlüssel мужского рода; после suchen в Akkusativ нужен einen Schlüssel.'],
+  ],
+  'word-order': [
+    ['Соберите, начав с Am Abend: wir / kochen / Am Abend', 'Am Abend kochen wir.', 'Вся группа Am Abend занимает одну позицию; kochen стоит на второй.'],
+    ['Соберите вопрос, начав с Wo: du / wohnst / Wo', 'Wo wohnst du?', 'После вопросительного слова Wo стоит спрягаемый глагол wohnst.'],
+    ['Соберите вопрос да/нет: ihr / morgen / Kommt', 'Kommt ihr morgen?', 'В вопросе без вопросительного слова Kommt занимает первую позицию.'],
+    ['Соберите, начав с Jeden Tag: sie / arbeitet / Jeden Tag', 'Jeden Tag arbeitet sie.', 'Обстоятельство Jeden Tag целиком занимает первую позицию; после глагола идёт sie.'],
+    ['Соберите вопрос, начав с Wann: der Kurs / beginnt / Wann', 'Wann beginnt der Kurs?', 'После Wann идёт beginnt, а затем подлежащее der Kurs.'],
+  ],
+  negation: [
+    ['Напишите отрицание всего дополнения: Ich kaufe ___ (ein Auto).', 'kein Auto', 'Существительное с ein отрицается kein: Auto среднего рода, форма kein Auto.'],
+    ['Напишите отрицание всего дополнения: Er hat ___ (einen Hund).', 'keinen Hund', 'Мужской Akkusativ требует keinen, поэтому keinen Hund.'],
+    ['Отрицайте признак с nicht: Das Wasser ist kalt.', 'Das Wasser ist nicht kalt.', 'Nicht ставим непосредственно перед отрицаемым прилагательным kalt.'],
+    ['Отрицайте с kein: Wir haben Bücher.', 'Wir haben keine Bücher.', 'При нулевом артикле во множественном числе используем keine Bücher.'],
+    ['Отрицайте только morgen: Er kommt morgen, sondern heute.', 'Er kommt nicht morgen, sondern heute.', 'При противопоставлении nicht стоит перед выделяемым обстоятельством morgen.'],
+  ],
+  dative: [
+    ['Дополнение с определённым артиклем: Sie hilft ___ (Kind).', 'dem Kind', 'Helfen управляет Dativ; средний род даёт dem Kind.'],
+    ['Дополнение с неопределённым артиклем: mit ___ (Freund)', 'einem Freund', 'Mit требует Dativ, мужской неопределённый артикль — einem.'],
+    ['Дополнение с определённым артиклем: bei ___ (Eltern)', 'den Eltern', 'Bei требует Dativ; во множественном числе den, у Eltern уже есть -n.'],
+    ['Запишите с определённым артиклем: Wir fahren mit ___ (Zug).', 'Wir fahren mit dem Zug.', 'После mit стоит Dativ: мужской Zug получает артикль dem.'],
+    ['Запишите с неопределённым артиклем: Ich danke ___ (Lehrerin).', 'Ich danke einer Lehrerin.', 'Danken требует Dativ: для Lehrerin нужна форма einer Lehrerin.'],
+  ],
+  perfect: [
+    ['Partizip II в предложении: Er hat den Brief ___. (schreiben)', 'geschrieben', 'Schreiben — сильный глагол: Partizip II geschrieben с окончанием -en.'],
+    ['Заполните обе части Perfekt: Wir ___ nach Köln ___. (fahren)', 'sind gefahren', 'При перемещении fahren образует Perfekt с sein: wir sind gefahren.'],
+    ['Заполните обе части Perfekt: Sie (она) ___ lange ___. (telefonieren)', 'hat telefoniert', 'Telefonieren образует Perfekt с haben; глаголы на -ieren не получают ge-.'],
+    ['Запишите в Perfekt: Er besucht Anna.', 'Er hat Anna besucht.', 'Besuchen — с неотделяемой приставкой be-; Partizip II besucht без ge-.'],
+    ['Запишите в Perfekt: Ich stehe früh auf.', 'Ich bin früh aufgestanden.', 'Aufstehen обозначает изменение состояния, требует sein; ge стоит после приставки auf-.'],
+  ],
+  modals: [
+    ['Вставьте wollen: Er ___ Arzt werden.', 'will', 'В единственном числе у wollen меняется основа: er will без окончания -t.'],
+    ['Вставьте sollen: Wir ___ hier warten.', 'sollen', 'Для wir форма sollen совпадает с инфинитивом; warten остаётся в конце.'],
+    ['Выберите müssen или dürfen: Du ___ hier nicht rauchen. Здесь курение запрещено.', 'darfst', 'Запрет выражает nicht dürfen; nicht müssen означает отсутствие необходимости.'],
+    ['Соберите, начав с Heute: wir / können / kommen / Heute', 'Heute können wir kommen.', 'После Heute стоит können, затем wir; основной инфинитив kommen в конце.'],
+    ['Запишите: Ich ___ morgen nicht arbeiten. (müssen: нет необходимости)', 'Ich muss morgen nicht arbeiten.', 'Nicht müssen означает «не обязан»; форма при ich — muss.'],
+  ],
+  reflexive: [
+    ['Вставьте местоимение: Ihr interessiert ___ für Musik.', 'euch', 'При ihr возвратное местоимение Akkusativ — euch. Предлог für сохраняется.'],
+    ['Вставьте местоимение: Er erinnert ___ an die Reise.', 'sich', 'При er возвратная форма sich; erinnern an требует Akkusativ после an.'],
+    ['Вставьте Dativ: Ich wasche ___ die Hände.', 'mir', 'Die Hände уже прямое дополнение, поэтому возвратное местоимение при ich стоит в Dativ: mir.'],
+    ['Запишите с sich beeilen: Wir ___, denn der Zug kommt.', 'Wir beeilen uns, denn der Zug kommt.', 'При wir употребляется uns; beeilen нельзя оставлять без возвратного местоимения.'],
+    ['Запишите с sich setzen: Du ___ auf den Stuhl.', 'Du setzt dich auf den Stuhl.', 'Sich setzen требует Akkusativ dich; направление на стул — auf den Stuhl.'],
+  ],
+  separable: [
+    ['Соберите, начав с Der Kurs: Der Kurs / um neun / fängt / an', 'Der Kurs fängt um neun an.', 'Anfangen отделяет an; в форме er fängt корневая гласная меняется на ä.'],
+    ['Соберите с модальным глаголом: Ich / muss / aufstehen / früh', 'Ich muss früh aufstehen.', 'После müssen нужен целый инфинитив aufstehen, приставка не отделяется.'],
+    ['Вставьте приставку: Bitte mach das Fenster ___! (zumachen)', 'zu', 'В повелительном предложении zumachen отделяет приставку zu в конец.'],
+    ['Запишите в Präsens: Wir / mitbringen / Kuchen.', 'Wir bringen Kuchen mit.', 'В главном предложении mitbringen разделяется на bringen и конечную приставку mit.'],
+    ['Запишите в Präsens: Sie (она) / abholen / das Kind.', 'Sie holt das Kind ab.', 'Abholen разделяем: форма holt на второй позиции, приставка ab в конце.'],
+  ],
+  prepositions: [
+    ['Полная группа с определённым артиклем: Das Bild hängt ___ (an, Wand).', 'an der Wand', 'Описываем место: an + Dativ; Wand женского рода, an der Wand.'],
+    ['Полная группа с определённым артиклем: Ich hänge das Bild ___ (an, Wand).', 'an die Wand', 'Указываем цель размещения: an + Akkusativ; женская форма die.'],
+    ['Полная группа с определённым артиклем: Er läuft ___ (in, Park), не покидая парк.', 'in dem Park', 'Движение внутри места не означает направление в него: Dativ in dem Park.', ['im Park']],
+    ['Запишите со слитной формой: Wir sitzen ___ (in, das Café).', 'Wir sitzen im Café.', 'Местонахождение требует Dativ: in dem Café сокращается до im Café.'],
+    ['Запишите: Sie stellt die Tasche ___ (unter, der Tisch; определённый артикль).', 'Sie stellt die Tasche unter den Tisch.', 'Stellen указывает на цель размещения; unter den Tisch стоит в Akkusativ.'],
+  ],
+  comparative: [
+    ['Вставьте сравнительную степень: Der Zug ist ___ als der Bus. (schnell)', 'schneller', 'К schnell добавляется -er; сравниваем неравное с помощью als.'],
+    ['Вставьте сравнительную степень: Dieser Weg ist ___ als jener. (kurz)', 'kürzer', 'У kurz в сравнительной степени появляются умлаут и -er: kürzer.'],
+    ['Вставьте союз: Sie ist so groß ___ ihr Bruder.', 'wie', 'При равенстве употребляется сочетание so … wie, а не als.'],
+    ['Запишите сравнительную степень в предложении: Heute habe ich ___ Zeit als gestern. (viel)', 'Heute habe ich mehr Zeit als gestern.', 'У viel особая сравнительная форма mehr; als вводит второй объект сравнения.'],
+    ['Запишите сравнительную степень: Dieses Zimmer ist ___ als das andere. (warm)', 'Dieses Zimmer ist wärmer als das andere.', 'Warm образует Komparativ wärmer с умлаутом; после ist прилагательное без падежного окончания.'],
+  ],
+};
